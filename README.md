@@ -4,6 +4,10 @@
 
 ```sh
 # Part 1
-cat day1/part1_sample.txt | python3 day1/part1.py
-cat day1/part1_puzzle.txt | python3 day1/part1.py
+cat day1/sample.txt | python3 day1/part1.py
+cat day1/puzzle.txt | python3 day1/part1.py
+
+# Part 2
+cat day1/sample.txt | python3 day1/part2.py
+cat day1/puzzle.txt | python3 day1/part2.py
 ```
