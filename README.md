@@ -1,4 +1,8 @@
-# advent-of-code-2021
+# Advent of Code 2021
+
+## Prerequisite
+
+- python > 3.10
 
 ## Day 1: Sonar Sweep
 
