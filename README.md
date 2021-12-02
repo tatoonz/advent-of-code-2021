@@ -4,14 +4,16 @@
 
 - python > 3.10
 
-## Day 1: Sonar Sweep
+## How to execute code
+
+Replace day folder, input file, and part you would like to execute.
 
 ```sh
-# Part 1
-cat day1/sample.txt | python3 day1/part1.py
-cat day1/puzzle.txt | python3 day1/part1.py
+cat {day_folder}/{input_file} | python3 {day_folder}/{part_of_the_day}.py
+```
 
-# Part 2
-cat day1/sample.txt | python3 day1/part2.py
-cat day1/puzzle.txt | python3 day1/part2.py
+For example, if you would like to execute day 1 part 1 with sample input, the command is:
+
+```sh
+cat day1/sample.txt | python3 day1/part1.py
 ```
