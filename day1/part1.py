@@ -13,4 +13,8 @@ input = [int(line) for line in sys.stdin]
 # 3. a=208, b=210
 # 4. and so on...
 result = sum(b > a for a, b in zip(input, input[1:]))
+
+# result
+# sample: 7
+# puzzle: 1624
 print(result)
