@@ -7,13 +7,14 @@ aim = 0
 for line in sys.stdin:
     cmd = line.split()
 
+    units = int(cmd[1])
     match cmd[0]:
         case 'forward':
-            hPos += int(cmd[1])
-            depth += aim * int(cmd[1])
+            hPos += units
+            depth += aim * units
         case 'down':
-            aim += int(cmd[1])
+            aim += units
         case 'up':
-            aim -= int(cmd[1])
+            aim -= units
 
 print(hPos*depth)

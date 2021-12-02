@@ -6,12 +6,13 @@ depth = 0
 for line in sys.stdin:
     cmd = line.split()
 
+    units = int(cmd[1])
     match cmd[0]:
         case 'forward':
-            hPos += int(cmd[1])
+            hPos += units
         case 'down':
-            depth += int(cmd[1])
+            depth += units
         case 'up':
-            depth -= int(cmd[1])
+            depth -= units
 
 print(hPos*depth)
