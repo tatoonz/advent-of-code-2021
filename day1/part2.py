@@ -1,21 +1,17 @@
 import sys
 
-input = []
-for line in sys.stdin:
-    input.append(int(line))
+input = [int(line) for line in sys.stdin]
 
-threeMeasurement = []
-index = 2
-while index < len(input):
-    threeMeasurement.append(input[index] + input[index-1] + input[index-2])
-    index += 1
-
+prevSum = 0
 result = 0
-index = 1
-while index < len(threeMeasurement):
-    if threeMeasurement[index-1] < threeMeasurement[index]:
+for i in range(2, len(input)):
+    curSum = input[i] + input[i-1] + input[i-2]
+    if prevSum != 0 and curSum > prevSum:
         result += 1
 
-    index += 1
+    prevSum = curSum
 
+# result
+# sample: 5
+# puzzle: 1653
 print(result)
