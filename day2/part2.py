@@ -17,4 +17,7 @@ for line in sys.stdin:
         case 'up':
             aim -= units
 
+# result
+# sample: 900
+# puzzle: 1599311480
 print(hPos*depth)
