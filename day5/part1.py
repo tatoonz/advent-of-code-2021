@@ -7,6 +7,11 @@ def parse_coord(coord):
     return int(x), int(y)
 
 
+def find_range(a, b):
+    step = 1 if a < b else -1
+    return range(a, b + step, step)
+
+
 diagram = defaultdict(int)
 
 for line in sys.stdin:
@@ -16,12 +21,10 @@ for line in sys.stdin:
     x2, y2 = parse_coord(coords[1])
 
     if y1 == y2:
-        step = 1 if x1 < x2 else -1
-        for x in range(x1, x2 + step, step):
+        for x in find_range(x1, x2):
             diagram[(x, y1)] += 1
     elif x1 == x2:
-        step = 1 if y1 < y2 else -1
-        for y in range(y1, y2 + step, step):
+        for y in find_range(y1, y2):
             diagram[(x1, y)] += 1
 
 # result
