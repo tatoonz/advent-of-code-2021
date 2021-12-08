@@ -1,5 +1,4 @@
 import sys
-from collections import Counter
 
 # unique segments
 unique_segments = [2, 4, 3, 7]
