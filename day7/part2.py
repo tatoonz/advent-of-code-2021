@@ -5,8 +5,6 @@ def calc_fuel_cost(guess_position, crab_positions):
     result = 0
     for crab_position in crab_positions:
         steps = abs(crab_position - guess_position)
-
-        # calc fuel in linear rate equal to n!
         result += int(steps * (steps + 1) / 2)
 
     return result
