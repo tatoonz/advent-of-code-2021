@@ -34,7 +34,7 @@ input = [[int(num) for num in list(line.strip())] for line in sys.stdin]
 result = 0
 
 for y in range(len(input)):
-    for x in range(len(input[0])):
+    for x in range(len(input[y])):
         current_height = input[y][x]
 
         if (
