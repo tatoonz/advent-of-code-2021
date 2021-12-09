@@ -31,7 +31,7 @@ def get_left(input, x, y):
 
 input = [[int(num) for num in list(line.strip())] for line in sys.stdin]
 
-low_points = []
+result = 0
 
 for y in range(len(input)):
     for x in range(len(input[0])):
@@ -43,9 +43,9 @@ for y in range(len(input)):
             and current_height < get_bottom(input, x, y)
             and current_height < get_left(input, x, y)
         ):
-            low_points.append(current_height+1)
+            result += current_height+1
 
 # result
 # sample: 15
 # puzzle: 585
-print(sum(low_points))
+print(result)
