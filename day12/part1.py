@@ -19,4 +19,5 @@ result = count_paths(nodes, 'start', visited={'start'})
 
 # result
 # sample: 226
+# puzzle: 3679
 print(result)
