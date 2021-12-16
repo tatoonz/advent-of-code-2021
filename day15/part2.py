@@ -1,3 +1,4 @@
+# Use Dijkstra's algorithm, learnt it from: https://www.youtube.com/watch?v=DYUfkN9D88s
 from collections import defaultdict
 import sys
 import heapq
