@@ -8,6 +8,7 @@ cave = {(int(x), int(y)): int(risk) for y, line in enumerate(sys.stdin)
 
 edge_x, edge_y = max(cave)
 map_expand = 5
+max_risk_level = 9
 
 
 def neighbours(x, y, visited):
@@ -43,8 +44,8 @@ while len(q) > 0:
         nb_cost = cave[(nb_x % (edge_x + 1), nb_y % (edge_y+1))] + \
             (nb_x // (edge_x+1)) + (nb_y // (edge_y+1))
 
-        while nb_cost > 9:
-            nb_cost -= 9
+        # wrap back risk level higher than max risk
+        nb_cost = (nb_cost - 1) % max_risk_level + 1
 
         cost_to = nb_cost + cost
         heapq.heappush(q, (cost_to, nb_x, nb_y))
